@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CabutlahApp</string>
+    <string name="image">foto item</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_title">Description</string>
+    <string name="rating_title">Rating</string>
+    <string name="detail_image">detail image</string>
+    <string name="menu_title">Menu</string>
+    <string name="foto_menu">foto menu</string>
+    <string name="button_set_route">button set route</string>
+    <string name="log_out">Log Out</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="email">email</string>
+    <string name="holiday">Holiday</string>
+
+    <string-array name="nearby_location">
+        <item>--Nearby Location--</item>
+        <item>Restaurant</item>
+        <item>Fasilitas Olahraga</item>
+        <item>Gedung Seni</item>
+        <item>Museum</item>
+        <item>Taman</item>
+        <item>Balai Kota</item>
+        <item>Taman</item>
+        <item>Stasiun Kereta Api</item>
+        <item>Trans Jakarta</item>
+
+
+    </string-array>
+</resources>

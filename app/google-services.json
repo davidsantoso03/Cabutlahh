@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "274980313045",
+    "firebase_url": "https://cabutlah-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cabutlah",
+    "storage_bucket": "cabutlah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274980313045:android:223df762bf654b86094f5c",
+        "android_client_info": {
+          "package_name": "com.bangkit.cabutlahapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274980313045-hlbr0q2rog8bsqkiq14rm8vb5bb2cbvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs4-3OQAAF-AHrFpMW3I7mDL66BdTlj8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274980313045-hlbr0q2rog8bsqkiq14rm8vb5bb2cbvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
