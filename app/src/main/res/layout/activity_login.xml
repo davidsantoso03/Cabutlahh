@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cabutlah_splash"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
 
     <TextView
@@ -17,7 +16,7 @@
         android:fontFamily="@font/abel"
         android:text="Login"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -43,11 +42,11 @@
             android:layout_height="wrap_content"
             android:autofillHints="username"
             android:fontFamily="@font/abel"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="text"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_title" />
@@ -74,7 +73,7 @@
             android:fontFamily="@font/abel"
             android:textColorHint="@color/black"
             android:inputType="textPassword"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,9 +84,9 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_login"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
         android:background="@color/white"
         android:backgroundTint="@color/blue"
         android:src="@drawable/human_footprint"
@@ -98,12 +97,13 @@
         app:layout_constraintTop_toBottomOf="@id/password_input_layout" />
 
     <TextView
+        android:background="@color/blue"
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/abel"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

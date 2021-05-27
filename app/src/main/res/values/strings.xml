@@ -9,7 +9,6 @@
     <string name="menu_title">Menu</string>
     <string name="foto_menu">foto menu</string>
     <string name="button_set_route">button set route</string>
-    <string name="log_out">Log Out</string>
     <string name="confirm_password">Confirm password</string>
     <string name="email">email</string>
     <string name="holiday">Holiday</string>
@@ -28,4 +27,36 @@
 
 
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log Out</string>
+    <string name="welcome_to_cabutlah_app">Welcome to Cabutlah App</string>
+    <string name="changepass" />
+    <string name="full_name" />
+    <string name="changepic" />
+    <string name="password_title" />
+    <string name="phone_title">phone_title</string>
+    <string name="phone">phone</string>
+    <string name="email_title" />
+    <string name="password" />
+    <string name="find_your_location">Find Your Location</string>
+    <string name="todo">TODO</string>
+    <string name="hotel">Hotel</string>
+    <string name="transport">Transport</string>
+    <string name="welcome_back">Welcome Back,</string>
+
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="change_password">Change Password</string>
+
 </resources>
