@@ -16,14 +16,10 @@
     <string-array name="nearby_location">
         <item>--Nearby Location--</item>
         <item>Restaurant</item>
-        <item>Fasilitas Olahraga</item>
-        <item>Gedung Seni</item>
+        <item>Art Gallery</item>
         <item>Museum</item>
-        <item>Taman</item>
-        <item>Balai Kota</item>
-        <item>Taman</item>
-        <item>Stasiun Kereta Api</item>
-        <item>Trans Jakarta</item>
+        <item>Amusement Park</item>
+        <item>Hospital</item>
 
 
     </string-array>
