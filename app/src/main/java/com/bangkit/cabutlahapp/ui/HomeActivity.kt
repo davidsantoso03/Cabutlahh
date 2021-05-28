@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 
 import androidx.recyclerview.widget.RecyclerView
@@ -18,15 +19,17 @@ import com.bangkit.cabutlahapp.*
 import com.bangkit.cabutlahapp.databinding.ActivityHomeBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.inappmessaging.internal.Logging
 import java.lang.Math.abs
 
 class HomeActivity : AppCompatActivity()
 {
-    val mAuth:FirebaseAuth = FirebaseAuth.getInstance()
+    private val mAuth:FirebaseAuth = FirebaseAuth.getInstance()
     private lateinit var binding: ActivityHomeBinding
     private lateinit var viewPager2: ViewPager2
     private val sliderHandler = Handler()
-
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var navView: NavigationView
     lateinit var toogle: ActionBarDrawerToggle
 
     companion object {
@@ -41,42 +44,33 @@ class HomeActivity : AppCompatActivity()
         val email = mAuth.currentUser?.email
         binding.email.text = email
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("")
-        setSupportActionBar(toolbar)
-
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
-
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navView = findViewById(R.id.nav_view)
 
         toogle = ActionBarDrawerToggle(this,drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navView.setNavigationItemSelectedListener {
+                when(it.itemId){
+                    R.id.nav_home-> {
+                        val intent = Intent(this,HomeActivity::class.java)
+                        startActivity(intent)
+                    }
+                    R.id.nav_profile -> {
+                        val intent = Intent(this,ProfileActivity::class.java)
+                        startActivity(intent)
+                    }
+                    R.id.nav_logout ->{
+                        val mAuth = FirebaseAuth.getInstance()
+                        mAuth.signOut()
+                        finish()
+                    }
 
-            when(it.itemId){
-                R.id.nav_home -> {}
-                R.id.nav_profile->Toast.makeText(applicationContext,"Clicked Profile", Toast.LENGTH_SHORT).show()
-                R.id.nav_logout->{
-                    val mAuth = FirebaseAuth.getInstance()
-                    mAuth.signOut()
-                    finish()
                 }
-
-
-            }
             true
         }
-        binding.imgProfile.setOnClickListener{
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
-        }
-        binding.logout.setOnClickListener{
-            val mAuth = FirebaseAuth.getInstance()
-            mAuth.signOut()
-            finish()
-        }
+
         binding.btnLocation.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
             startActivity(intent)
@@ -134,7 +128,10 @@ class HomeActivity : AppCompatActivity()
 
 
 
+
 }
+
+
 
 
 

@@ -6,18 +6,11 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".ui.HomeActivity"
     tools:openDrawer="start">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,14 +21,6 @@
             android:layout_height="wrap_content"
             android:background="@drawable/backgroundhome"
             android:orientation="vertical">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="@color/blue"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -58,24 +43,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/t1"
+                    android:layout_marginTop="20dp"
                     android:layout_marginStart="5dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/email"
                     android:textColor="#fff"
                     android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/email"
-                    android:backgroundTint="#ff5d9e"
-                    android:elevation="10dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:text="@string/log_out"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
+
 
                 <ImageView
                     android:id="@+id/imgProfile"
@@ -146,7 +121,7 @@
                             android:fontFamily="sans-serif"
                             android:text="@string/holiday"
                             android:textColor="#fff"
-                            android:textSize="18sp" />
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -260,4 +235,12 @@
 
         </LinearLayout>
     </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 </androidx.drawerlayout.widget.DrawerLayout>
