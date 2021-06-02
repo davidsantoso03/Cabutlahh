@@ -21,9 +21,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CabutlahApp">
+        <activity android:name=".ui.maps.MapsDetailActivity"
+            android:parentActivityName=".ui.Detail.DetailActivity"/>
         <activity android:name=".ui.vacation.VacationActivity"
             android:parentActivityName=".ui.home.HomeActivity"
-            android:label="VACATION"/>
+            android:label="VACATION"
+            />
         <activity android:name=".ui.restaurant.RestaurantActivity"
             android:parentActivityName=".ui.home.HomeActivity"
             android:label="RESTAURANT"/>
@@ -42,7 +45,8 @@
             android:name=".ui.maps.MapsActivity"
             android:parentActivityName=".ui.home.HomeActivity"
             android:label="Maps"/>
-        <activity android:name=".ui.Detail.DetailActivity" />
+        <activity android:name=".ui.Detail.DetailActivity"
+            android:parentActivityName=".ui.home.HomeActivity"/>
         <activity
             android:name=".ui.home.HomeActivity"
             android:theme="@style/Theme.CabutlahApp" />

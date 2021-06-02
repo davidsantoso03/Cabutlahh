@@ -39,7 +39,8 @@ class RestaurantAdapter(private val restaurantList : ArrayList<Restaurant>) : Re
 
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_RESTAURANT, resto.id)
+                    intent.putExtra(DetailActivity.EXTRA_TITLE, resto.nama)
+                    intent.putExtra(DetailActivity.EXTRA_TYPE, resto.type)
                     itemView.context.startActivity(intent)
                 }
             }

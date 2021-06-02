@@ -19,10 +19,12 @@
         android:orientation="vertical">
 
         <ImageView
+            android:elevation="10dp"
             android:id="@+id/img_item"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/photo2"
+            android:scaleType="fitXY"
             />
         <TextView
             android:id="@+id/tv_name"

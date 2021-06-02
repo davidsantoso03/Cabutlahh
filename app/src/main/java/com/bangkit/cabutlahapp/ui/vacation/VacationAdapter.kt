@@ -39,7 +39,8 @@ class VacationAdapter(private val vacayList : ArrayList<Vacation>) : RecyclerVie
 
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_RESTAURANT, vacay.id)
+                    intent.putExtra(DetailActivity.EXTRA_TITLE, vacay.nama)
+                    intent.putExtra(DetailActivity.EXTRA_TYPE, vacay.type)
                     itemView.context.startActivity(intent)
                 }
             }

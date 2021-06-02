@@ -1,57 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Detail.DetailActivity">
+    android:orientation="vertical"
+    tools:context=".ui.Detail.DetailActivity"
+    >
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/detail_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/suharti"/>
+        android:src="@drawable/suharti"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/detail_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="15dp"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:fontFamily="@font/raleway_bold"
         tools:text="Ayam Suharti" />
 
     <TextView
+        android:drawableLeft="@drawable/ic_location"
         android:id="@+id/detail_address"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_name"
         tools:text="Jl tanaman blok jj1 no 2 Depok" />
 
-    <TextView
-        android:id="@+id/detail_rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/detail_name"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:text="4.6"
-        app:drawableEndCompat="@drawable/ic_star" />
+
 
     <TextView
         android:id="@+id/detail_description_title"
@@ -60,55 +46,49 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="@string/description_title"
+        android:textStyle="bold"
+        android:fontFamily="@font/abel"
         android:textColor="@color/black"
         android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_address" />
+    />
 
     <TextView
         android:id="@+id/detail_description"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
         android:textSize="18sp"
+        android:fontFamily="@font/abel"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_description_title"
         tools:text="ayam suharti adalah salah satu restoran yang dinanti oleh keluarga indonesia, karena dia" />
 
+<androidx.cardview.widget.CardView
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:layout_margin="20dp"
+    android:elevation="100dp"
+    app:cardMaxElevation="200dp"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="@color/pink"
+    android:layout_gravity="center">
+    <Button
+        android:id="@+id/btn_show_location"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/show_location"
+       android:backgroundTint="@color/pink"
+        android:text="@string/show_location"
+        android:textAllCaps="false"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+      />
+</androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/menu_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/menu_title"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_description" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_title"
-        tools:listitem="@layout/item_menu" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/button_set_route" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

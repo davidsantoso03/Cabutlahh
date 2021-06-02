@@ -38,7 +38,8 @@ class HotelAdapter(private val hotelList : ArrayList<Hotel>) : RecyclerView.Adap
 
                itemView.setOnClickListener {
                    val intent = Intent(itemView.context, DetailActivity::class.java)
-                   intent.putExtra(DetailActivity.EXTRA_HOTEL, hotel.id)
+                   intent.putExtra(DetailActivity.EXTRA_TITLE, hotel.nama)
+                   intent.putExtra(DetailActivity.EXTRA_TYPE, hotel.type)
                    itemView.context.startActivity(intent)
                }
            }

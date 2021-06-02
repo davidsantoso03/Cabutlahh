@@ -17,7 +17,4 @@ class MapsViewModel(private val repo: CabutlahRepo) : ViewModel() {
                         key: String): LiveData<MapResponse> =
         repo.getNearbyPlaces(context, type, location, output, key)
 
-    fun getFirebaseData(){
-
-    }
 }

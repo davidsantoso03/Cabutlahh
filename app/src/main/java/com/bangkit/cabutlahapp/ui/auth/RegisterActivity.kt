@@ -16,16 +16,20 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        binding.goToLogin.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnRegister.setOnClickListener {
-
+            val userName = binding.username.text.toString().trim()
             val email = binding.email.text.toString().trim(' ')
             val password = binding.password.text.toString().trim()
             val confirmPass = binding.confirmPassword.text.toString().trim()
-            val phoneNo = binding.inputNumber.text.toString().trim()
+            val phoneNo = binding.phoneNumber.text.toString().trim()
 
             when {
+                userName.isEmpty() -> binding.username.error = "Please Input User Name"
                 email.isEmpty() -> binding.email.error = "Please write your email"
                 !email.contains("@") -> binding.email.error = "Your email is not exist"
                 password.isEmpty() -> binding.password.error = "Please write your password"

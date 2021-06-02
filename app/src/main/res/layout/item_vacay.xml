@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/photo2"
+            android:scaleType="fitXY"
             />
         <TextView
             android:id="@+id/tv_name"
@@ -30,9 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            android:textStyle="bold"
             android:text="@string/name"
             android:textColor="@color/white"
-            />
+         />
 
 
     </LinearLayout>

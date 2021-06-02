@@ -56,10 +56,14 @@
     <string name="change_password">Change Password</string>
     <string name="name">Name</string>
     <string name="hospital">Hospital</string>
-    <string name="restaurant">Restaurant</string>
+
     <string name="if_you_dont_have_account_please_register_here">if you dont have account, please register here</string>
     <string name="sign_in">Sign in</string>
     <string name="login">Login</string>
     <string name="passwordtxt">Password</string>
-
+    <string name="already_have_sign_in_here">already have? sign in here!</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="show_location">Show Location</string>
+    <string name="detail_location_title">Detail Location</string>
 </resources>
