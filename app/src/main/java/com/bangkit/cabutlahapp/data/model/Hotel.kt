@@ -6,14 +6,16 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Hotel(
+        var id:Int?=null,
+        var alamat: String? = null,
+        var deskripsi: String? = null,
+        var foto: String? = null,
 
-    var foto:String?=null,
+        var latitude: Double? = null,
 
-    var latitude: Double?= null,
+        var longitude: Double? = null,
 
-    var longitude : Double?=null,
+        var nama: String? = null,
 
-    var nama : String?=null,
-
-    var type :String?=null
-): Parcelable
+        var type: String? = null
+) : Parcelable

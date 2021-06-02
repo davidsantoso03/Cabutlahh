@@ -6,7 +6,9 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Restaurant(
-
+        var id:Int?=null,
+        var alamat: String? = null,
+        var deskripsi: String? = null,
     var foto:String?=null,
 
     var latitude: Double?= null,

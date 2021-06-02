@@ -57,5 +57,9 @@
     <string name="name">Name</string>
     <string name="hospital">Hospital</string>
     <string name="restaurant">Restaurant</string>
+    <string name="if_you_dont_have_account_please_register_here">if you dont have account, please register here</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login">Login</string>
+    <string name="passwordtxt">Password</string>
 
 </resources>

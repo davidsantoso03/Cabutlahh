@@ -1,5 +1,6 @@
 package com.bangkit.cabutlahapp.ui.restaurant
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import com.bangkit.cabutlahapp.data.model.Restaurant
 import com.bangkit.cabutlahapp.data.model.Vacation
 import com.bangkit.cabutlahapp.databinding.ItemListBinding
 import com.bangkit.cabutlahapp.databinding.ItemVacayBinding
+import com.bangkit.cabutlahapp.ui.Detail.DetailActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -34,6 +36,12 @@ class VacationAdapter(private val vacayList : ArrayList<Vacation>) : RecyclerVie
                             .error(R.drawable.ic_error)
                     )
                     .into(imgItem)
+
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_RESTAURANT, vacay.id)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }

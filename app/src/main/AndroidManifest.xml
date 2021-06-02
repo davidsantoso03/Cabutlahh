@@ -40,7 +40,8 @@
 
         <activity
             android:name=".ui.maps.MapsActivity"
-            android:parentActivityName=".ui.home.HomeActivity" />
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:label="Maps"/>
         <activity android:name=".ui.Detail.DetailActivity" />
         <activity
             android:name=".ui.home.HomeActivity"

@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
         binding.btnRegister.setOnClickListener {
-         
+
             val email = binding.email.text.toString().trim(' ')
             val password = binding.password.text.toString().trim()
             val confirmPass = binding.confirmPassword.text.toString().trim()
