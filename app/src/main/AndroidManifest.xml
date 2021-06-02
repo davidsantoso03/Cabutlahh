@@ -21,28 +21,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CabutlahApp">
-        <activity android:name=".ui.ProfileActivity"
-            android:parentActivityName=".ui.HomeActivity"/>
+        <activity android:name=".ui.vacation.VacationActivity"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:label="VACATION"/>
+        <activity android:name=".ui.restaurant.RestaurantActivity"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:label="RESTAURANT"/>
+        <activity android:name=".ui.hotel.HotelActivity"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:label="HOTEL"/>
+        <activity
+            android:name=".ui.auth.ProfileActivity"
+            android:parentActivityName=".ui.home.HomeActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ui.MapsActivity"
-            android:parentActivityName=".ui.HomeActivity"
-            />
-        <activity android:name=".DetailActivity" />
+            android:name=".ui.maps.MapsActivity"
+            android:parentActivityName=".ui.home.HomeActivity" />
+        <activity android:name=".ui.Detail.DetailActivity" />
         <activity
-            android:name=".ui.HomeActivity"
+            android:name=".ui.home.HomeActivity"
             android:theme="@style/Theme.CabutlahApp" />
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".ui.auth.RegisterActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.auth.LoginActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.SplashScreenActivity"
+            android:name=".ui.splash.SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

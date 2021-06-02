@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cabutlah_splash"
-    tools:context=".ui.RegisterActivity">
+    tools:context=".ui.auth.RegisterActivity">
 
 
     <TextView
@@ -21,6 +21,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_input_layout"
@@ -125,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="password"
-            android:hint="@string/confirm_password"
+            android:hint="Input Phone Number"
             android:inputType="textPassword"
             android:padding="16dp"
             android:textColor="@color/black"
@@ -147,7 +148,7 @@
         android:padding="8dp"
         android:text="Create Account"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

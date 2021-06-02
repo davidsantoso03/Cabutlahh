@@ -1,10 +1,11 @@
-package com.bangkit.cabutlahapp
+package com.bangkit.cabutlahapp.ui.home
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.bangkit.cabutlahapp.R
 import com.makeramen.roundedimageview.RoundedImageView
 
 class SliderAdapter(sliderItems: MutableList<Sliderdata>, viewPager2: ViewPager2) : RecyclerView.Adapter<SliderAdapter.SliderViewHolder>() {

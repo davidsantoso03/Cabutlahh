@@ -1,4 +1,4 @@
-package com.bangkit.cabutlahapp.ui
+package com.bangkit.cabutlahapp.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.bangkit.cabutlahapp.R
+import com.bangkit.cabutlahapp.ui.auth.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

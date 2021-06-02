@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.HomeActivity"
+    tools:context=".ui.home.HomeActivity"
     tools:openDrawer="start">
 
 
@@ -43,8 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/t1"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_margin="3dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/email"
                     android:textColor="#fff"
@@ -71,7 +70,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:context=".ui.HomeActivity">
+                    tools:context=".ui.home.HomeActivity">
 
                     <androidx.viewpager2.widget.ViewPager2
                         android:id="@+id/viewPager_ImageSlider"
@@ -102,6 +101,7 @@
                     app:cardElevation="10dp">
 
                     <LinearLayout
+                        android:id="@+id/vacay_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -136,6 +136,7 @@
                     app:cardElevation="10dp">
 
                     <LinearLayout
+                        android:id="@+id/resto_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -145,16 +146,16 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/transport" />
+                            android:src="@drawable/ic_baseline_restaurant_menu_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif"
-                            android:text="@string/transport"
+                            android:text="@string/restaurant"
                             android:textColor="#fff"
-                            android:textSize="18sp" />
+                            android:textSize="15sp" />
 
 
                     </LinearLayout>
@@ -170,7 +171,7 @@
                     app:cardElevation="10dp">
 
                     <LinearLayout
-
+                        android:id="@+id/hotel_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -189,7 +190,7 @@
                             android:fontFamily="sans-serif"
                             android:text="@string/hotel"
                             android:textColor="#fff"
-                            android:textSize="18sp" />
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 

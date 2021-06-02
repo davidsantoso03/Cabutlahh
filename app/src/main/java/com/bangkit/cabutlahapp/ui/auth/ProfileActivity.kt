@@ -1,4 +1,4 @@
-package com.bangkit.cabutlahapp.ui
+package com.bangkit.cabutlahapp.ui.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

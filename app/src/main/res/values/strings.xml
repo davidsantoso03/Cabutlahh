@@ -16,12 +16,12 @@
     <string-array name="nearby_location">
         <item>--Nearby Location--</item>
         <item>Restaurant</item>
-        <item>Art Gallery</item>
-        <item>Museum</item>
-        <item>Amusement Park</item>
         <item>Hospital</item>
-
-
+        <item>Galeri Seni</item>
+        <item>Tempat Hiburan</item>
+        <item>Hotel</item>
+        <item>Terminal Bus</item>
+        <item>Stasiun</item>
     </string-array>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -54,5 +54,8 @@
     <string name="username">Username</string>
     <string name="register">Register</string>
     <string name="change_password">Change Password</string>
+    <string name="name">Name</string>
+    <string name="hospital">Hospital</string>
+    <string name="restaurant">Restaurant</string>
 
 </resources>

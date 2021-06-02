@@ -1,10 +1,11 @@
-package com.bangkit.cabutlahapp.ui
+package com.bangkit.cabutlahapp.ui.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.bangkit.cabutlahapp.databinding.ActivityLoginBinding
+import com.bangkit.cabutlahapp.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {

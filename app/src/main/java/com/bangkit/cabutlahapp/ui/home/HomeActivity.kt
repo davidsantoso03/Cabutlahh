@@ -1,14 +1,11 @@
-package com.bangkit.cabutlahapp.ui
+package com.bangkit.cabutlahapp.ui.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.Toolbar
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 
 import androidx.recyclerview.widget.RecyclerView
@@ -17,9 +14,14 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.bangkit.cabutlahapp.*
 import com.bangkit.cabutlahapp.databinding.ActivityHomeBinding
+import com.bangkit.cabutlahapp.ui.*
+import com.bangkit.cabutlahapp.ui.auth.ProfileActivity
+import com.bangkit.cabutlahapp.ui.hotel.HotelActivity
+import com.bangkit.cabutlahapp.ui.maps.MapsActivity
+import com.bangkit.cabutlahapp.ui.restaurant.RestaurantActivity
+import com.bangkit.cabutlahapp.ui.vacation.VacationActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.inappmessaging.internal.Logging
 import java.lang.Math.abs
 
 class HomeActivity : AppCompatActivity()
@@ -54,11 +56,11 @@ class HomeActivity : AppCompatActivity()
         navView.setNavigationItemSelectedListener {
                 when(it.itemId){
                     R.id.nav_home-> {
-                        val intent = Intent(this,HomeActivity::class.java)
+                        val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
                     }
                     R.id.nav_profile -> {
-                        val intent = Intent(this,ProfileActivity::class.java)
+                        val intent = Intent(this, ProfileActivity::class.java)
                         startActivity(intent)
                     }
                     R.id.nav_logout ->{
@@ -73,6 +75,18 @@ class HomeActivity : AppCompatActivity()
 
         binding.btnLocation.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.restoBtn.setOnClickListener {
+            val intent = Intent(this, RestaurantActivity::class.java)
+            startActivity(intent)
+        }
+        binding.hotelBtn.setOnClickListener {
+            val intent = Intent(this, HotelActivity::class.java)
+            startActivity(intent)
+        }
+        binding.vacayBtn.setOnClickListener {
+            val intent = Intent(this, VacationActivity::class.java)
             startActivity(intent)
         }
         viewPager2 = binding.viewPagerImageSlider
